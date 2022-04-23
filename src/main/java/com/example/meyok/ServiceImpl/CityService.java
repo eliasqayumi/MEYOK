@@ -2,12 +2,11 @@ package com.example.meyok.ServiceImpl;
 
 import com.example.meyok.Model.City;
 import com.example.meyok.Repository.CityRepository;
-import com.example.meyok.Service.CityServiceInt;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class CityService implements CityServiceInt {
+public class CityService implements com.example.meyok.Service.CityService {
     private CityRepository cityRepository;
     public CityService(CityRepository cityRepository) {
         this.cityRepository=cityRepository;

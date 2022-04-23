@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DepartmentStudent {
+public class DepartmentStudents {
     @Id
     @Column(name = "student_no", nullable = false, length = 10)
     private String id;

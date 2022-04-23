@@ -18,7 +18,7 @@ public class StudentsTakeSubject {
     @MapsId("studentNo")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "student_no", nullable = false)
-    private DepartmentStudent studentNo;
+    private DepartmentStudents studentNo;
 
     @MapsId("subjectId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
