@@ -8,6 +8,6 @@ public interface StudentsTakeSubjectService {
     void insert(StudentsTakeSubject studentsTakeSubject);
     List<StudentsTakeSubject> getAllStudentsTakeSubject();
     void deleteById(String studentsTakeSubjectId);
-    void update(StudentsTakeSubject studentsTakeSubject);
+    void update(String studentsTakeSubjectId, StudentsTakeSubject studentsTakeSubject);
     StudentsTakeSubject getStudentsTakeSubjectById(String studentsTakeSubjectId);
 }

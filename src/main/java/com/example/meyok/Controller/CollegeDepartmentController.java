@@ -1,6 +1,5 @@
 package com.example.meyok.Controller;
 
-import com.example.meyok.Model.College;
 import com.example.meyok.Model.CollegeDepartment;
 import com.example.meyok.ServiceImpl.CollegeDepartmentServiceImpl;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +21,8 @@ public class CollegeDepartmentController {
     }
 
     @GetMapping("/{id}")
-    public CollegeDepartment getCollegeDepartmentByID(@PathVariable("id") String collegeDepartmentID) {
-        return this.collegeDepartmentService.getCollegeDepartmentById(collegeDepartmentID);
+    public CollegeDepartment getCollegeDepartmentById(@PathVariable("id") String collegeDepartmentId) {
+        return this.collegeDepartmentService.getCollegeDepartmentById(collegeDepartmentId);
     }
 
     @PostMapping

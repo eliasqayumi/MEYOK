@@ -8,6 +8,6 @@ public interface ExpertiseService {
     void insert(Expertise expertise);
     List<Expertise> getAllExpertises();
     void deleteById(String expertiseId);
-    void update(Expertise expertise);
+    void update(String expertiseID,Expertise expertise);
     Expertise getExpertiseById(String expertiseId);
 }

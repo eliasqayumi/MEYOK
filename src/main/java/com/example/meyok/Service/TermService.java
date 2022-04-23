@@ -8,6 +8,6 @@ public interface TermService {
     void insert(Term term);
     List<Term> getAllTerm();
     void deleteById(String termId);
-    void update(Term term);
+    void update(String termId,Term term);
     Term getTermById(String termId);
 }

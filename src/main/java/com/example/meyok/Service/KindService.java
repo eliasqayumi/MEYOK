@@ -8,6 +8,6 @@ public interface KindService {
     void insert(Kind kind);
     List<Kind> getAllKind();
     void deleteById(String kindId);
-    void update(Kind kind);
+    void update(String kindId,Kind kind);
     Kind getKindById(String kindId);
 }

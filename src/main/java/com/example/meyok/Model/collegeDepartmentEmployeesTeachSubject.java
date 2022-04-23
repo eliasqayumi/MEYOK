@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CollegeDepartmentEmployeesTeachSubject {
+public class collegeDepartmentEmployeesTeachSubject {
     @EmbeddedId
     private CollegeDepartmentEmployeesTeachSubjectId id;
 

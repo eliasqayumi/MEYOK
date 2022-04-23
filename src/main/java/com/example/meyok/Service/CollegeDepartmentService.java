@@ -1,6 +1,7 @@
 package com.example.meyok.Service;
 
 import com.example.meyok.Model.CollegeDepartment;
+import com.example.meyok.Model.CollegeDepartmentEmployee;
 
 import java.util.List;
 

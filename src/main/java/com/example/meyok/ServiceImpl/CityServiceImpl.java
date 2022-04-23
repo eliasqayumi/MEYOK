@@ -2,14 +2,18 @@ package com.example.meyok.ServiceImpl;
 
 import com.example.meyok.Model.City;
 import com.example.meyok.Repository.CityRepository;
+import com.example.meyok.Service.CityService;
+import com.example.meyok.exceptions.NotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class CityService implements com.example.meyok.Service.CityService {
+public class CityServiceImpl implements CityService {
     private CityRepository cityRepository;
-    public CityService(CityRepository cityRepository) {
-        this.cityRepository=cityRepository;
+
+    public CityServiceImpl(CityRepository cityRepository) {
+        this.cityRepository = cityRepository;
     }
 
     @Override
@@ -28,12 +32,14 @@ public class CityService implements com.example.meyok.Service.CityService {
     }
 
     @Override
-    public void update(City city) {
-        cityRepository.save(city);
+    public void update(String cityId, City city) {
+        City updateCity=cityRepository.findCityById(cityId).orElseThrow(()->new NotFoundException("City by "+cityId+" id not found."));
+        updateCity.setCityName(city.getCityName());
+        cityRepository.save(updateCity);
     }
 
     @Override
     public City getCityById(String cityId) {
-        return cityRepository.getCityById(cityId).orElseThrow();
+        return cityRepository.findCityById(cityId).orElseThrow();
     }
 }

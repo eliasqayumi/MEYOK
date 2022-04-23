@@ -8,6 +8,6 @@ public interface CityService {
     void insert(City city);
     List<City> getAllCities();
     void deleteById(String cityId);
-    void update(City city);
+    void update(String cityId,City city);
     City getCityById(String cityId);
 }

@@ -8,6 +8,6 @@ public interface TitleService {
     void insert(Title title);
     List<Title> getAllTitle();
     void deleteById(String titleId);
-    void update(Title title);
+    void update(String titleId,Title title);
     Title getTitleById(String titleId);
 }

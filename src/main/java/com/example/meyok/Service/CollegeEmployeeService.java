@@ -8,6 +8,6 @@ public interface CollegeEmployeeService {
     void insert(CollegeEmployee collegeEmployee);
     List<CollegeEmployee> getAllCollegeEmployee();
     void deleteById(String collegeEmployeeId);
-    void update(CollegeEmployee collegeEmployee);
+    void update(String collegeEmployeeId,CollegeEmployee collegeEmployee);
     CollegeEmployee getCollegeEmployeeById(String collegeEmployeeId);
 }

@@ -8,6 +8,6 @@ public interface DistrictService {
     void insert(District district);
     List<District> getAllDistrict();
     void deleteById(String districtId);
-    void update(District district);
+    void update(String districtId,District district);
     District getDistrictById(String districtId);
 }
