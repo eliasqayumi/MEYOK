@@ -1,5 +1,8 @@
 package com.example.meyok.Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
@@ -10,6 +13,9 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Embeddable
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CollegeDepartmentEmployeesTeachSubjectId implements Serializable {
     private static final long serialVersionUID = -1712899982765679359L;
     @Column(name = "subject_id", nullable = false, length = 10)
@@ -23,45 +29,6 @@ public class CollegeDepartmentEmployeesTeachSubjectId implements Serializable {
     @Column(name = "finish_date", nullable = false)
     private LocalDate finishDate;
 
-    public LocalDate getFinishDate() {
-        return finishDate;
-    }
-
-    public void setFinishDate(LocalDate finishDate) {
-        this.finishDate = finishDate;
-    }
-
-    public LocalDate getEntranceDate() {
-        return entranceDate;
-    }
-
-    public void setEntranceDate(LocalDate entranceDate) {
-        this.entranceDate = entranceDate;
-    }
-
-    public String getTermId() {
-        return termId;
-    }
-
-    public void setTermId(String termId) {
-        this.termId = termId;
-    }
-
-    public String getCdeId() {
-        return cdeId;
-    }
-
-    public void setCdeId(String cdeId) {
-        this.cdeId = cdeId;
-    }
-
-    public String getSubjectId() {
-        return subjectId;
-    }
-
-    public void setSubjectId(String subjectId) {
-        this.subjectId = subjectId;
-    }
 
     @Override
     public int hashCode() {

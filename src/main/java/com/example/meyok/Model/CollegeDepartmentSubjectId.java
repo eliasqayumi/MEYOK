@@ -1,5 +1,8 @@
 package com.example.meyok.Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
@@ -9,6 +12,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CollegeDepartmentSubjectId implements Serializable {
     private static final long serialVersionUID = -1817311869983804874L;
     @Column(name = "col_dep_id", nullable = false, length = 10)
@@ -16,21 +22,6 @@ public class CollegeDepartmentSubjectId implements Serializable {
     @Column(name = "subject_id", nullable = false, length = 10)
     private String subjectId;
 
-    public String getSubjectId() {
-        return subjectId;
-    }
-
-    public void setSubjectId(String subjectId) {
-        this.subjectId = subjectId;
-    }
-
-    public String getColDepId() {
-        return colDepId;
-    }
-
-    public void setColDepId(String colDepId) {
-        this.colDepId = colDepId;
-    }
 
     @Override
     public int hashCode() {

@@ -1,5 +1,8 @@
 package com.example.meyok.Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
@@ -10,6 +13,9 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Embeddable
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class StudentsTakeSubjectId implements Serializable {
     private static final long serialVersionUID = -4312072587522520055L;
     @Column(name = "student_no", nullable = false, length = 10)
@@ -27,45 +33,7 @@ public class StudentsTakeSubjectId implements Serializable {
     @Column(name = "finish_date", nullable = false)
     private LocalDate finishDate;
 
-    public String getStudentNo() {
-        return studentNo;
-    }
 
-    public void setStudentNo(String studentNo) {
-        this.studentNo = studentNo;
-    }
-
-    public String getSubjectId() {
-        return subjectId;
-    }
-
-    public void setSubjectId(String subjectId) {
-        this.subjectId = subjectId;
-    }
-
-    public String getTermId() {
-        return termId;
-    }
-
-    public void setTermId(String termId) {
-        this.termId = termId;
-    }
-
-    public LocalDate getEntranceDate() {
-        return entranceDate;
-    }
-
-    public void setEntranceDate(LocalDate entranceDate) {
-        this.entranceDate = entranceDate;
-    }
-
-    public LocalDate getFinishDate() {
-        return finishDate;
-    }
-
-    public void setFinishDate(LocalDate finishDate) {
-        this.finishDate = finishDate;
-    }
 
     @Override
     public boolean equals(Object o) {
