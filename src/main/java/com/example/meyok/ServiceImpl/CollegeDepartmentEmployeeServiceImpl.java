@@ -23,7 +23,7 @@ public class CollegeDepartmentEmployeeServiceImpl implements CollegeDepartmentSe
     }
 
     @Override
-    public void update(CollegeDepartment collegeDepartment) {
+    public void update(String collegeDepartmentId, CollegeDepartment collegeDepartment) {
 
     }
 

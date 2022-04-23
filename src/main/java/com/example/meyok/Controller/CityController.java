@@ -31,7 +31,7 @@ public class CityController {
         this.cityService.insert(city);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public void update(@RequestBody City city){
         this.cityService.update(city);
     }
