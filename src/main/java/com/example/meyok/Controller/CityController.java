@@ -1,12 +1,13 @@
 package com.example.meyok.Controller;
 
 import com.example.meyok.Model.City;
-import com.example.meyok.Service.CityService;
+import com.example.meyok.ServiceImpl.CityService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("city")
 public class CityController {
     private CityService cityService;
     public CityController(CityService cityService) {
@@ -15,7 +16,7 @@ public class CityController {
         cityService.insert(city1);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<City> getAllCities(){
         return this.cityService.getAllCities();
     }
@@ -25,12 +26,12 @@ public class CityController {
         return this.cityService.getCityById(cityId);
     }
 
-    @PostMapping("/")
+    @PostMapping
     public void insert(@RequestBody City city){
         this.cityService.insert(city);
     }
 
-    @PutMapping("/")
+    @PutMapping
     public void update(@RequestBody City city){
         this.cityService.update(city);
     }
@@ -39,7 +40,6 @@ public class CityController {
     public void deleteById(@PathVariable("id") String cityId){
         cityService.deleteById(cityId);
     }
-
 
 
 

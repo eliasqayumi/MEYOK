@@ -1,7 +1,6 @@
-package com.example.meyok.ServiceInterface;
+package com.example.meyok.Service;
 
 import com.example.meyok.Model.City;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

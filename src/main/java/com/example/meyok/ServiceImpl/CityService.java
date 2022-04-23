@@ -1,8 +1,8 @@
-package com.example.meyok.Service;
+package com.example.meyok.ServiceImpl;
 
 import com.example.meyok.Model.City;
 import com.example.meyok.Repository.CityRepository;
-import com.example.meyok.ServiceInterface.CityServiceInt;
+import com.example.meyok.Service.CityServiceInt;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
