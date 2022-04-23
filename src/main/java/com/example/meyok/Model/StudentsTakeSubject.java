@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "students_take_subject")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class StudentsTakeSubject {
     @EmbeddedId
     private StudentsTakeSubjectId id;
@@ -29,6 +29,5 @@ public class StudentsTakeSubject {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "term_id", nullable = false)
     private Term term;
-
 
 }

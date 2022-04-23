@@ -12,8 +12,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "task")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Task {
     @Id
     @Column(name = "task_id", nullable = false, length = 10)

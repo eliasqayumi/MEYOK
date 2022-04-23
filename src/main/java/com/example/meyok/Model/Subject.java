@@ -28,4 +28,13 @@ public class Subject {
     @Column(name = "subject_AKTS", nullable = false, length = 2)
     private String subjectAkts;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+
 }

@@ -14,37 +14,25 @@ public class StudentsTakeSubjectId implements Serializable {
     private static final long serialVersionUID = -4312072587522520055L;
     @Column(name = "student_no", nullable = false, length = 10)
     private String studentNo;
+
     @Column(name = "subject_id", nullable = false, length = 10)
     private String subjectId;
+
     @Column(name = "term_id", nullable = false, length = 10)
     private String termId;
+
     @Column(name = "entrance_date", nullable = false)
     private LocalDate entranceDate;
+
     @Column(name = "finish_date", nullable = false)
     private LocalDate finishDate;
 
-    public LocalDate getFinishDate() {
-        return finishDate;
+    public String getStudentNo() {
+        return studentNo;
     }
 
-    public void setFinishDate(LocalDate finishDate) {
-        this.finishDate = finishDate;
-    }
-
-    public LocalDate getEntranceDate() {
-        return entranceDate;
-    }
-
-    public void setEntranceDate(LocalDate entranceDate) {
-        this.entranceDate = entranceDate;
-    }
-
-    public String getTermId() {
-        return termId;
-    }
-
-    public void setTermId(String termId) {
-        this.termId = termId;
+    public void setStudentNo(String studentNo) {
+        this.studentNo = studentNo;
     }
 
     public String getSubjectId() {
@@ -55,17 +43,28 @@ public class StudentsTakeSubjectId implements Serializable {
         this.subjectId = subjectId;
     }
 
-    public String getStudentNo() {
-        return studentNo;
+    public String getTermId() {
+        return termId;
     }
 
-    public void setStudentNo(String studentNo) {
-        this.studentNo = studentNo;
+    public void setTermId(String termId) {
+        this.termId = termId;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(termId, studentNo, finishDate, subjectId, entranceDate);
+    public LocalDate getEntranceDate() {
+        return entranceDate;
+    }
+
+    public void setEntranceDate(LocalDate entranceDate) {
+        this.entranceDate = entranceDate;
+    }
+
+    public LocalDate getFinishDate() {
+        return finishDate;
+    }
+
+    public void setFinishDate(LocalDate finishDate) {
+        this.finishDate = finishDate;
     }
 
     @Override
@@ -79,4 +78,10 @@ public class StudentsTakeSubjectId implements Serializable {
                 Objects.equals(this.subjectId, entity.subjectId) &&
                 Objects.equals(this.entranceDate, entity.entranceDate);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(termId, studentNo, finishDate, subjectId, entranceDate);
+    }
+
 }
