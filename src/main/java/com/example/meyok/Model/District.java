@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class District {
     @Id
     @Column(name = "district_id", nullable = false, length = 10)
